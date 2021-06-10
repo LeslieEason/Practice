@@ -1,4 +1,4 @@
-package com.socket;
+package com.com.socket;
 
 import java.io.IOException;
 

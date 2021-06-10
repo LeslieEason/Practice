@@ -1,4 +1,4 @@
-package com.socket.robot;
+package com.com.socket.robot;
 
 import java.io.IOException;
 

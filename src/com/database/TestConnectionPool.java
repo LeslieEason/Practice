@@ -30,7 +30,6 @@ public class TestConnectionPool
     private static void connectionPoolWay() throws SQLException, ClassNotFoundException
     {
         ConnectionPool cp = new ConnectionPool(10);
-
         System.out.println("开始连接池方式插入数据测试：");
         long start = System.currentTimeMillis();
         List<Thread> ts = new ArrayList<>();
@@ -90,6 +89,7 @@ class WorkingThread extends Thread
         super(name);
         this.cp=cp;
     }
+
     public void run()
     {
         Connection c= null;
@@ -113,7 +113,6 @@ class TraditionalWorkingThread extends Thread
     private String Sqluserpassword="admin";
     private PreparedStatement pstmt;
     private Connection con = null;
-    private Statement st1=null;
     String drivername = "com.mysql.jdbc.Driver";
     String url = "jdbc:mysql://127.0.0.1:3306/flightsystem?useSLL=false/useUnicode=true&characterEncoding=utf8";
     public  TraditionalWorkingThread() throws SQLException,ClassNotFoundException
@@ -149,7 +148,6 @@ class ConnectionpoolWorkingThread extends Thread
     private String Sqluserpassword="admin";
     private PreparedStatement pstmt;
     private Connection con = null;
-    private Statement st1=null;
     String drivername = "com.mysql.jdbc.Driver";
     String url = "jdbc:mysql://127.0.0.1:3306/flightsystem?useSLL=false/useUnicode=true&characterEncoding=utf8";
     private ConnectionPool cp;

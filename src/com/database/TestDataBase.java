@@ -161,7 +161,7 @@ public class TestDataBase
         public Human get(int id) throws SQLException
         {
             Human human=null;
-            String sql="select * from hero where id ="+id;
+            String sql="select * from test where id ="+id;
             pstmt=con.prepareStatement(sql);
             ResultSet rs=pstmt.getResultSet();
             if(rs.next())

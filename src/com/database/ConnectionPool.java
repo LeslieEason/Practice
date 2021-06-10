@@ -8,12 +8,9 @@ public class ConnectionPool {
     int size;
     private String Sqlusername="root";
     private String Sqluserpassword="admin";
-    private PreparedStatement pstmt;
     private Connection con = null;
-    private Statement st1=null;
     String drivername = "com.mysql.jdbc.Driver";
     String url = "jdbc:mysql://127.0.0.1:3306/flightsystem?useSLL=false/useUnicode=true&characterEncoding=utf8";
-    ResultSet rs;
     public ConnectionPool(int size) throws ClassNotFoundException, SQLException
     {
         this.size=size;
